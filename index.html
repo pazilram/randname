@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"> 
+    <title>Automatically Generate Pronouncable Names</title>
+    <script src="proquint.js"></script>
+    <script src="randname.js"></script>
+    <script>
+      function regen() {
+          document.getElementById("output-data").value = generateEnglishName(20);
+      }
+      window.onload = regen;
+    </script>
+  </head>
+  <body>
+    <h1>Automatically Generate Pronouncable Names</h1>
+    <p>
+      The generator uses these fragments that are pronouncable in the
+      English language. For example, you won't get a name like "Fngtr"
+      which is not obviously pronouncable.
+    </p>
+    <p>
+      <b>Crypto warning: these names might not be generated securely.
+	Please do not use them for cryptographic keys or passwords.</b>
+    </p>
+    <input with="40" id="output-data" />
+    <button type="button" onclick="regen()">Regenerate</button>
+  </body>
+</html>
